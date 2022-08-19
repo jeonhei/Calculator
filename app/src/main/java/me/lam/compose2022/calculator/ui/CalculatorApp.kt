@@ -138,7 +138,7 @@ private fun calResult(currentInput: String, recentResult: String, operator: Stri
             "÷" -> {
                 if(currentInput.toBigDecimal() != BigDecimal.ZERO) {//除数不能为0
                     result(
-                        (recentResult.toBigDecimal().divide(currentInput.toBigDecimal(), 5, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString())
+                        (recentResult.toBigDecimal().divide(currentInput.toBigDecimal(), 6, BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString())
                     )
                 }
             }
